@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-12-24T01:28:08.417Z",
+    "end": "2024-12-24T01:28:13.621Z",
+    "duration": 5204,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3267d976-e00e-4f2f-87b9-1deb57558169",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fe8e38ce-5589-4f29-b828-f45e65db190c",
+          "title": "Página de Login - TESTES",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve realizar login com sucesso, ao acessar com credenciais válidas",
+              "fullTitle": "Página de Login - TESTES Deve realizar login com sucesso, ao acessar com credenciais válidas",
+              "timedOut": null,
+              "duration": 2506,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const usuarioValido = Cypress.env('usuarioValido');\nconst senhaValida = Cypress.env('senhaValida');\n_LoginPage.default.preencherUsuario(usuarioValido);\n_LoginPage.default.preencherSenha(senhaValida);\n_LoginPage.default.submeterFormulario();\ncy.url().should('include', '/inventory.html');",
+              "err": {},
+              "uuid": "d8b33c53-ac54-465c-80fd-cf65cc863736",
+              "parentUUID": "fe8e38ce-5589-4f29-b828-f45e65db190c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve mostrar erro ao tentar realizar acesso com usuário não existente ou inválido",
+              "fullTitle": "Página de Login - TESTES Deve mostrar erro ao tentar realizar acesso com usuário não existente ou inválido",
+              "timedOut": null,
+              "duration": 1341,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const usuarioAleatorio = _faker.faker.internet.userName();\nconst senhaAleatoria = _faker.faker.internet.password();\n_LoginPage.default.preencherUsuario(usuarioAleatorio);\n_LoginPage.default.preencherSenha(senhaAleatoria);\n_LoginPage.default.submeterFormulario();\ncy.get('[data-test=\"error\"]').should('be.visible').and('contain', 'Epic sadface: Username and password do not match any user in this service');",
+              "err": {},
+              "uuid": "79cd52f1-c888-444d-94f6-63692cbc5c29",
+              "parentUUID": "fe8e38ce-5589-4f29-b828-f45e65db190c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve mostrar erro ao tentar realizar acesso com usuário já bloqueado",
+              "fullTitle": "Página de Login - TESTES Deve mostrar erro ao tentar realizar acesso com usuário já bloqueado",
+              "timedOut": null,
+              "duration": 915,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const senhaValida = Cypress.env('senhaValida');\n_LoginPage.default.preencherUsuario('locked_out_user');\n_LoginPage.default.preencherSenha(senhaValida);\n_LoginPage.default.submeterFormulario();\ncy.get('[data-test=\"error\"]').should('be.visible').and('contain', 'Sorry, this user has been locked out.');",
+              "err": {},
+              "uuid": "23880296-2c18-4939-b3aa-e14fdeb8b6bf",
+              "parentUUID": "fe8e38ce-5589-4f29-b828-f45e65db190c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve validar erro ao acessar sem realizar o preenchimento de todos campos",
+              "fullTitle": "Página de Login - TESTES Deve validar erro ao acessar sem realizar o preenchimento de todos campos",
+              "timedOut": null,
+              "duration": 267,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.submeterFormulario();\ncy.get('[data-test=\"error\"]').should('be.visible').and('contain', 'Username is required');",
+              "err": {},
+              "uuid": "773d74fb-0657-4229-a681-ed9b5326afcc",
+              "parentUUID": "fe8e38ce-5589-4f29-b828-f45e65db190c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d8b33c53-ac54-465c-80fd-cf65cc863736",
+            "79cd52f1-c888-444d-94f6-63692cbc5c29",
+            "23880296-2c18-4939-b3aa-e14fdeb8b6bf",
+            "773d74fb-0657-4229-a681-ed9b5326afcc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5029,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

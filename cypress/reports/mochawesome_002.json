@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-12-24T01:28:16.491Z",
+    "end": "2024-12-24T01:28:24.035Z",
+    "duration": 7544,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "88d9e528-f8ba-409f-ac3f-d0f228eb6188",
+      "title": "",
+      "fullFile": "cypress\\e2e\\products.cy.js",
+      "file": "cypress\\e2e\\products.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3b314cb3-e22d-495d-a149-61ee03fe0ffa",
+          "title": "Página de Produtos - TESTES",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve ser mostrado a página dos produtos",
+              "fullTitle": "Página de Produtos - TESTES Deve ser mostrado a página dos produtos",
+              "timedOut": null,
+              "duration": 2206,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_ProductsPage.default.validaTitulo();",
+              "err": {},
+              "uuid": "ee15d64f-6728-49e2-8365-33973248ac61",
+              "parentUUID": "3b314cb3-e22d-495d-a149-61ee03fe0ffa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve ser possível adicionar um item ao carrinho",
+              "fullTitle": "Página de Produtos - TESTES Deve ser possível adicionar um item ao carrinho",
+              "timedOut": null,
+              "duration": 1297,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_ProductsPage.default.adicionarItemAoCarrinho('Sauce Labs Backpack');\n_ProductsPage.default.validarQuantidadeDeItensNoCarrinho(1);",
+              "err": {},
+              "uuid": "bb93ed41-1296-4741-991d-026caf458b72",
+              "parentUUID": "3b314cb3-e22d-495d-a149-61ee03fe0ffa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve ser possível adicionar múltiplos itens ao carrinho",
+              "fullTitle": "Página de Produtos - TESTES Deve ser possível adicionar múltiplos itens ao carrinho",
+              "timedOut": null,
+              "duration": 1135,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_ProductsPage.default.adicionarItemAoCarrinho('Sauce Labs Backpack');\n_ProductsPage.default.adicionarItemAoCarrinho('Sauce Labs Bike Light');\n_ProductsPage.default.validarQuantidadeDeItensNoCarrinho(2);",
+              "err": {},
+              "uuid": "8c113e5d-9bcb-4c7f-8905-6abeb92d4e83",
+              "parentUUID": "3b314cb3-e22d-495d-a149-61ee03fe0ffa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve ser possível remover item único de carrinho",
+              "fullTitle": "Página de Produtos - TESTES Deve ser possível remover item único de carrinho",
+              "timedOut": null,
+              "duration": 1153,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const nomeDoItem = 'Sauce Labs Backpack';\n_ProductsPage.default.adicionarItemAoCarrinho(nomeDoItem);\n_ProductsPage.default.validarQuantidadeDeItensNoCarrinho(1);\n_ProductsPage.default.removerItemDoCarrinho(nomeDoItem);\n_ProductsPage.default.validarCarrinhoVazio();",
+              "err": {},
+              "uuid": "2d1e9d18-56c8-43f9-878b-6e633d3d80a4",
+              "parentUUID": "3b314cb3-e22d-495d-a149-61ee03fe0ffa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve ser possível remover múltiplos itens de carrinho",
+              "fullTitle": "Página de Produtos - TESTES Deve ser possível remover múltiplos itens de carrinho",
+              "timedOut": null,
+              "duration": 1539,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const nomePrimeiroItem = 'Sauce Labs Backpack';\nconst nomeSegundoItem = 'Sauce Labs Bike Light';\n_ProductsPage.default.adicionarItemAoCarrinho(nomePrimeiroItem);\n_ProductsPage.default.adicionarItemAoCarrinho(nomeSegundoItem);\n_ProductsPage.default.validarQuantidadeDeItensNoCarrinho(2);\n_ProductsPage.default.removerItemDoCarrinho(nomePrimeiroItem);\n_ProductsPage.default.validarQuantidadeDeItensNoCarrinho(1);\n_ProductsPage.default.removerItemDoCarrinho(nomeSegundoItem);\n_ProductsPage.default.validarCarrinhoVazio();",
+              "err": {},
+              "uuid": "6367c28e-4149-4da5-b5c3-06376ce565b7",
+              "parentUUID": "3b314cb3-e22d-495d-a149-61ee03fe0ffa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ee15d64f-6728-49e2-8365-33973248ac61",
+            "bb93ed41-1296-4741-991d-026caf458b72",
+            "8c113e5d-9bcb-4c7f-8905-6abeb92d4e83",
+            "2d1e9d18-56c8-43f9-878b-6e633d3d80a4",
+            "6367c28e-4149-4da5-b5c3-06376ce565b7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7330,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
